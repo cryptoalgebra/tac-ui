@@ -1,9 +1,9 @@
-name: Algebra Integral Deploy
+name: TAC Front-end Deploy
 
 on:
   push:
     branches:
-      - master
+      - tac
 jobs:
   deploy:
     name: Build
