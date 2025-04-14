@@ -2,9 +2,10 @@ import { Currency } from "@cryptoalgebra/sdk";
 import React from "react";
 import { Address } from "wagmi";
 import WBTCLogo from "@/assets/tokens/wbtc.svg";
+import USDCLogo from "@/assets/tokens/usdc.svg";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
-import { TOKENS } from "@/constants/tokens";
+import { STABLECOINS, TOKENS } from "@/constants/tokens";
 
 interface CurrencyLogoProps {
     currency: Currency | undefined | null;
@@ -14,6 +15,10 @@ interface CurrencyLogoProps {
 }
 
 export const specialTokens: { [key: Address]: { symbol: string; logo: string } } = {
+    [STABLECOINS.USDC.address.toLowerCase()]: {
+        symbol: "USDC",
+        logo: USDCLogo,
+    },
     [TOKENS.TON.address.toLowerCase()]: {
         symbol: "TON",
         logo: "https://cache.tonapi.io/imgproxy/0boBDKrVQY502vqLLXqwwZTS87PyqSQq0hke-x11lqs/rs:fill:200:200:1/g:no/aHR0cHM6Ly90b25jby5pby9zdGF0aWMvdG9rZW4vVE9OX1RPS0VOLndlYnA.webp",

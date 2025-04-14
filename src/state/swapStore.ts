@@ -1,4 +1,4 @@
-import { TOKENS } from "@/constants/tokens";
+import { STABLECOINS } from "@/constants/tokens";
 import { useAlgebraPoolGlobalState, useAlgebraPoolTickSpacing } from "@/generated";
 import { useCurrency } from "@/hooks/common/useCurrency";
 import { useBestTradeExactIn, useBestTradeExactOut } from "@/hooks/swap/useBestTrade";
@@ -34,10 +34,10 @@ export const useSwapState = create<SwapState>((set, get) => ({
     independentField: SwapField.INPUT,
     typedValue: "",
     [SwapField.INPUT]: {
-        currencyId: TOKENS.TON.address as Address,
+        currencyId: ADDRESS_ZERO as Address,
     },
     [SwapField.OUTPUT]: {
-        currencyId: TOKENS.X.address as Address,
+        currencyId: STABLECOINS.USDC.address as Address,
     },
     wasInverted: false,
     lastFocusedField: SwapField.INPUT,
