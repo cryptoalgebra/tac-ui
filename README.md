@@ -1,6 +1,6 @@
-# Algebra Integral UI
+# TAC Algebra Integral UI
 
-[Algebra Integral on Holesky](https://integral.algebra.finance)
+[Algebra Integral on TAC](https://tac.algebra.finance)
 
 To launch the application locally:
 
